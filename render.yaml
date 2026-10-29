@@ -2,7 +2,7 @@ databases:
   - name: chargeneighbour-db
     databaseName: chargeneighbour
     user: chargeneighbour
-    plan: basic
+    plan: basic-256mb
 services:
   - type: web
     name: chargeneighbour
