@@ -2,12 +2,13 @@ databases:
   - name: chargeneighbour-db
     databaseName: chargeneighbour
     user: chargeneighbour
-    plan: basic-256mb
+    plan: free
+
 services:
   - type: web
     name: chargeneighbour
     runtime: python
-    plan: starter
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: flask --app app init-db && gunicorn app:app --bind 0.0.0.0:$PORT --workers 2
     healthCheckPath: /health
